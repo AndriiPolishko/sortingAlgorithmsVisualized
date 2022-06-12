@@ -1,0 +1,26 @@
+{
+  "name": "sortingalgorithmsvisualized",
+  "version": "1.0.0",
+  "description": "side exercise project for sorting algorithms visualization",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriiPolishko/sortingAlgorithmsVisualized.git"
+  },
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "quickSort",
+    "mergeSort",
+    "visualize"
+  ],
+  "author": "AndriiPolishko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriiPolishko/sortingAlgorithmsVisualized/issues"
+  },
+  "homepage": "https://github.com/AndriiPolishko/sortingAlgorithmsVisualized#readme"
+}
