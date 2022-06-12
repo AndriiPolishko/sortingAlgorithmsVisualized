@@ -11,6 +11,7 @@
     },
     "plugins": ["@typescript-eslint", "sonar"],
     "rules": {
-        "sonar/deprecation": 1
+        "sonar/deprecation": 1,
+        "no-plusplus": 0
     }
 }
