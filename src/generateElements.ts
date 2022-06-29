@@ -1,4 +1,8 @@
-import { maxHeight, minHeight } from './constants.js';
+import {
+  maxHeight,
+  minHeight,
+  multiplicationOfNumberOfElements,
+} from './constants.js';
 
 import { main } from './main.js';
 
@@ -24,7 +28,8 @@ function generateElements(): void {
   }
 
   const value = rangeOfElements?.value;
-  const numberOfElements = parseInt(value, 10) * 7 + 300;
+  const numberOfElements =
+    parseInt(value, 10) * multiplicationOfNumberOfElements;
 
   const heights: Array<string> = generateHeights(
     maxHeight,

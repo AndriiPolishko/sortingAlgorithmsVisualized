@@ -1,6 +1,6 @@
 const maxNumberOfElements = 100;
 const maxHeight = 80;
 const minHeight = 5;
-const rangeOfElements = document.querySelector('#js_rangeOfElements');
+const multiplicationOfNumberOfElements = 9.5;
 /* eslint-disable */
-export { maxNumberOfElements, maxHeight, minHeight, rangeOfElements };
+export { maxNumberOfElements, maxHeight, minHeight, multiplicationOfNumberOfElements, };

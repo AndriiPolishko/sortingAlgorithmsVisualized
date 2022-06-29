@@ -16,6 +16,8 @@
     "import/extensions": [1, "ignorePackages"],
     "no-multiple-empty-lines": 0,
     "import/no-unresolved": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "linebreak-style": "off",
+    "operator-linebreak": "warn"
   }
 }
