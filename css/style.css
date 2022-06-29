@@ -43,7 +43,7 @@ main {
 }
 
 .element {
-  width: 5px;
+  width: 1.5px;
   background-color: black;
-  margin: 0 2px;
+  margin: 0 0px;
 }

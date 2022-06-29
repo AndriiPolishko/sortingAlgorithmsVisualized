@@ -3,12 +3,6 @@ import { bubbleSort } from './bubbleSort.js';
 
 const main = document.querySelector('main') as HTMLElement;
 
-// const rangeOfElements = document.querySelector('#js.rangeOfElements') as HTMLInputElement;
-// let numberOfElements: number = +rangeOfElements?.value;
-// rangeOfElements.addEventListener("input", (e) => {
-//     numberOfElements = +rangeOfElements?.value;
-// })
-
 const bubbleSortButton = document.querySelector('#js_bubbleSort');
 bubbleSortButton?.addEventListener('click', bubbleSort);
 

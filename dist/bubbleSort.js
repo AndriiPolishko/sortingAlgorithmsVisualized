@@ -39,14 +39,6 @@ function sleep(milliseconds) {
 function bubbleSort() {
   return __awaiter(this, void 0, void 0, function* () {
     const elements = Array.from(main.children);
-    // const modifiedElements = elements.map((element, index) => {
-    //   const res = {
-    //     domLink: element,
-    //     position: index,
-    //     color: 'black',
-    //   };
-    //   return res;
-    // });
     const n = elements.length;
     for (let i = 0; i < n - 1; i++) {
       for (let j = 0; j < n - 1 - i; j++) {
@@ -56,13 +48,13 @@ function bubbleSort() {
           element1 === null || element1 === void 0
             ? void 0
             : element1.style.height,
-          10
+          10,
         );
         const size2 = parseInt(
           element2 === null || element2 === void 0
             ? void 0
             : element2.style.height,
-          10
+          10,
         );
         if (size1 > size2) {
           // eslint-disable-next-line no-await-in-loop
