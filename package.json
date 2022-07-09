@@ -11,7 +11,7 @@
     "lint": "eslint \"**/*.ts\"",
     "lint-fix": "eslint \"**/*.ts\" --fix",
     "prepare": "husky install",
-    "fix-all": "prettier --write . && eslint \"**/*.ts\" --fix"
+    "fix-all": "eslint \"**/*.ts\" --fix && prettier --write ."
   },
   "repository": {
     "type": "git",
