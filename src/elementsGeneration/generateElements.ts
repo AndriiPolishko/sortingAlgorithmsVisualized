@@ -2,22 +2,16 @@ import {
   maxHeight,
   minHeight,
   multiplicationOfNumberOfElements,
-} from './constants.js';
+  defaultNumberOfElements,
+} from '../constants.js';
 
-import { main } from './main.js';
+import { main } from '../main.js';
+
+import { generateHeights } from './generateHeights.js';
 
 const rangeOfElements = document.querySelector(
   '#js_rangeOfElements',
 ) as HTMLInputElement;
-
-function generateHeights(max: number, min: number, n: number) {
-  const heights: Array<string> = [];
-  for (let i = 0; i < n; i++) {
-    const height: string = `${Math.floor(Math.random() * max + min)}vh`;
-    heights.push(height);
-  }
-  return heights;
-}
 
 function generateElements(): void {
   // clear all elements
@@ -29,7 +23,8 @@ function generateElements(): void {
 
   const value = rangeOfElements?.value;
   const numberOfElements =
-    parseInt(value, 10) * multiplicationOfNumberOfElements;
+    parseInt(value, 10) * multiplicationOfNumberOfElements +
+    defaultNumberOfElements;
 
   const heights: Array<string> = generateHeights(
     maxHeight,
@@ -48,4 +43,4 @@ function generateElements(): void {
 
 rangeOfElements.addEventListener('input', generateElements);
 
-export { main, generateElements };
+export { generateElements };

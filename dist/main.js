@@ -1,4 +1,4 @@
-import { generateElements } from './generateElements.js';
+import { generateElements } from './elementsGeneration/generateElements.js';
 import { bubbleSort } from './bubbleSort.js';
 import { quickSort } from './quickSort.js';
 const main = document.querySelector('main');

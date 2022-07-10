@@ -8,25 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { main } from './main.js';
-function sleep(milliseconds) {
-    // eslint-disable-next-line no-promise-executor-return
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-// AUTHOR COMMENT: speed check up to line 23
-const speedRange = document.querySelector('#js_speed');
-// eslint-disable-next-line import/no-mutable-exports
-let speed = 10000 / (parseInt(speedRange === null || speedRange === void 0 ? void 0 : speedRange.value, 10) * 10);
-speedRange.addEventListener('input', (e) => {
-    const target = e === null || e === void 0 ? void 0 : e.target;
-    const value = parseInt(target === null || target === void 0 ? void 0 : target.value, 10);
-    speed = 10000 / (value * 10);
-    if (value === 0) {
-        speed = 1000;
-    }
-    else if (value === 100) {
-        speed = 0.5;
-    }
-});
+import { sleep } from './sleep.js';
+import { speed } from './sortingSpeed.js';
 function bubbleSort() {
     return __awaiter(this, void 0, void 0, function* () {
         const elements = Array.from(main.children);

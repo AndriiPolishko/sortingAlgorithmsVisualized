@@ -1,14 +1,7 @@
-import { maxHeight, minHeight, multiplicationOfNumberOfElements, defaultNumberOfElements, } from './constants.js';
-import { main } from './main.js';
+import { maxHeight, minHeight, multiplicationOfNumberOfElements, defaultNumberOfElements, } from '../constants.js';
+import { main } from '../main.js';
+import { generateHeights } from './generateHeights.js';
 const rangeOfElements = document.querySelector('#js_rangeOfElements');
-function generateHeights(max, min, n) {
-    const heights = [];
-    for (let i = 0; i < n; i++) {
-        const height = `${Math.floor(Math.random() * max + min)}vh`;
-        heights.push(height);
-    }
-    return heights;
-}
 function generateElements() {
     // clear all elements
     let lastChild = main.lastElementChild;
@@ -17,8 +10,8 @@ function generateElements() {
         lastChild = main.lastElementChild;
     }
     const value = rangeOfElements === null || rangeOfElements === void 0 ? void 0 : rangeOfElements.value;
-    const numberOfElements = parseInt(value, 10) * multiplicationOfNumberOfElements
-        + defaultNumberOfElements;
+    const numberOfElements = parseInt(value, 10) * multiplicationOfNumberOfElements +
+        defaultNumberOfElements;
     const heights = generateHeights(maxHeight, minHeight, numberOfElements);
     // eslint-disable-next-line array-callback-return
     heights.map((height) => {
@@ -29,4 +22,4 @@ function generateElements() {
     });
 }
 rangeOfElements.addEventListener('input', generateElements);
-export { main, generateElements };
+export { generateElements };
