@@ -7,9 +7,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { main } from './main.js';
-import { sleep } from './sleep.js';
-import { speed } from './sortingSpeed.js';
+/* eslint-disable no-param-reassign */
+import { main } from '../main.js';
+import { sleep } from '../aditions/sleep.js';
+import { speed } from '../aditions/sortingSpeed.js';
+const swap = (element1, element2) => {
+    const temp = element1 === null || element1 === void 0 ? void 0 : element1.style.height;
+    element1.style.height = element2 === null || element2 === void 0 ? void 0 : element2.style.height;
+    element2.style.height = temp;
+    element2.style.backgroundColor = 'red';
+    element1.style.backgroundColor = 'black';
+};
 function bubbleSort() {
     return __awaiter(this, void 0, void 0, function* () {
         const elements = Array.from(main.children);
@@ -23,11 +31,7 @@ function bubbleSort() {
                 if (size1 > size2) {
                     // eslint-disable-next-line no-await-in-loop
                     yield sleep(speed);
-                    const temp = element1 === null || element1 === void 0 ? void 0 : element1.style.height;
-                    element1.style.height = element2 === null || element2 === void 0 ? void 0 : element2.style.height;
-                    element2.style.height = temp;
-                    element2.style.backgroundColor = 'red';
-                    element1.style.backgroundColor = 'black';
+                    swap(element1, element2);
                 }
                 else {
                     element1.style.backgroundColor = 'black';

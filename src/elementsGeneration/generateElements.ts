@@ -3,7 +3,7 @@ import {
   minHeight,
   multiplicationOfNumberOfElements,
   defaultNumberOfElements,
-} from '../constants.js';
+} from '../aditions/constants.js';
 
 import { main } from '../main.js';
 

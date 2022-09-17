@@ -9,7 +9,7 @@ speedRange.addEventListener('input', (e) => {
   speed = 10000 / (value * 10);
 
   if (value === 0) {
-    speed = 1000;
+    speed = 1000000000000;
   } else if (value === 100) {
     speed = 0.5;
   }

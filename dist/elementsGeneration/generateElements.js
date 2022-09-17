@@ -1,4 +1,4 @@
-import { maxHeight, minHeight, multiplicationOfNumberOfElements, defaultNumberOfElements, } from '../constants.js';
+import { maxHeight, minHeight, multiplicationOfNumberOfElements, defaultNumberOfElements, } from '../aditions/constants.js';
 import { main } from '../main.js';
 import { generateHeights } from './generateHeights.js';
 const rangeOfElements = document.querySelector('#js_rangeOfElements');
