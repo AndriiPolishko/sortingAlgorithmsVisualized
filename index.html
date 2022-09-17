@@ -5,32 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
     <title>Sorting Algorithms Visualization</title>
   </head>
   <body>
     <header id="pageHeader">
       <div id="technicalData">
-        <button type="button" id="js_reset">Reset</button>
+        <button type="button" id="js_reset" class="button">
+          <span class="text">Reset</span>
+        </button>
         <div class="headerContainer">
-          <label for="speed">Speed of visualization</label>
-          <input id="js_speed" type="range" value="50" min="0" max="100" />
+          <label for="speed" class="text label">Speed of visualization</label>
+          <input
+            id="js_speed"
+            type="range"
+            value="50"
+            min="0"
+            max="100"
+            class="slider"
+          />
         </div>
         <div class="headerContainer">
-          <label for="rangeOfElements">Number of Elements</label>
+          <label for="rangeOfElements" class="text label"
+            >Number of Elements</label
+          >
           <input
             id="js_rangeOfElements"
             type="range"
             value="50"
             min="0"
             max="100"
+            class="slider"
           />
         </div>
       </div>
 
       <div class="choiceContainer">
-        <p>Choose an algorithm:</p>
-        <button type="button" id="js_bubbleSort">Bubble Sort</button>
-        <button type="button" id="js_quickSort">Quick Sort</button>
+        <button type="button" id="js_bubbleSort" class="button">
+          Bubble Sort
+        </button>
+        <button type="button" id="js_quickSort" class="button">
+          Quick Sort
+        </button>
       </div>
     </header>
     <main></main>
