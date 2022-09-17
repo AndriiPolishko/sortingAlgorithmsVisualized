@@ -7,26 +7,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { main } from './main.js';
-function sleep(milliseconds) {
-    // eslint-disable-next-line no-promise-executor-return
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-// AUTHOR COMMENT: speed check up to line 23
-const speedRange = document.querySelector('#js_speed');
-// eslint-disable-next-line import/no-mutable-exports
-let speed = 10000 / (parseInt(speedRange === null || speedRange === void 0 ? void 0 : speedRange.value, 10) * 10);
-speedRange.addEventListener('input', (e) => {
-    const target = e === null || e === void 0 ? void 0 : e.target;
-    const value = parseInt(target === null || target === void 0 ? void 0 : target.value, 10);
-    speed = 10000 / (value * 10);
-    if (value === 0) {
-        speed = 1000;
-    }
-    else if (value === 100) {
-        speed = 0.5;
-    }
-});
+/* eslint-disable no-param-reassign */
+import { main } from '../main.js';
+import { sleep } from '../aditions/sleep.js';
+import { speed } from '../aditions/sortingSpeed.js';
+const swap = (element1, element2) => {
+    const temp = element1 === null || element1 === void 0 ? void 0 : element1.style.height;
+    element1.style.height = element2 === null || element2 === void 0 ? void 0 : element2.style.height;
+    element2.style.height = temp;
+    element2.style.backgroundColor = 'red';
+    element1.style.backgroundColor = 'black';
+};
 function bubbleSort() {
     return __awaiter(this, void 0, void 0, function* () {
         const elements = Array.from(main.children);
@@ -40,11 +31,7 @@ function bubbleSort() {
                 if (size1 > size2) {
                     // eslint-disable-next-line no-await-in-loop
                     yield sleep(speed);
-                    const temp = element1 === null || element1 === void 0 ? void 0 : element1.style.height;
-                    element1.style.height = element2 === null || element2 === void 0 ? void 0 : element2.style.height;
-                    element2.style.height = temp;
-                    element2.style.backgroundColor = 'red';
-                    element1.style.backgroundColor = 'black';
+                    swap(element1, element2);
                 }
                 else {
                     element1.style.backgroundColor = 'black';

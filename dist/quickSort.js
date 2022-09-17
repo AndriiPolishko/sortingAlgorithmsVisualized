@@ -1,2 +1,0 @@
-function quickSort() { }
-export { quickSort };
