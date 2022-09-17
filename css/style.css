@@ -1,6 +1,11 @@
+:root {
+  --button: rgb(242, 241, 241);
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #pageHeader {
@@ -10,6 +15,7 @@
   justify-content: space-between;
   border: 1px solid black;
   margin: 10px;
+  border-radius: 0.5em;
 }
 
 label,
@@ -19,6 +25,8 @@ input {
 
 #technicalData {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #technicalData * {
@@ -27,10 +35,16 @@ input {
 
 .choiceContainer {
   display: flex;
+  align-items: center;
 }
 
 .choiceContainer * {
   margin: 0 20px 0 0;
+}
+
+.text {
+  font-size: 1em;
+  font-weight: 400;
 }
 
 main {
@@ -40,10 +54,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-radius: 0.5em;
 }
 
 .element {
   width: 1.5px;
   background-color: black;
   margin: 0 0px;
+}
+
+.button {
+  border-radius: 0.5em;
+  padding: 5px;
+  background-color: var(--button);
+  border-color: var(--button);
 }
